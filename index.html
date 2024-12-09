@@ -16,15 +16,69 @@
 		
 	</head>
 	<body class="is-preload">
+		<nav class="navbar fixed-top">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#"></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+				<div class="offcanvas-header">
+					<!-- <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5> -->
+					<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+					<div class="offcanvas-body inner">
+						<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+						<li class="nav-item">
+							<a href="#intro">Bienvenido</a>
+						</li>
+						<li class="nav-item">
+							<a href="#one">Proyectos</a>
+						</li>
+						<li class="nav-item">
+							<a href="#two">Experiencia</a>
+						</li>
+						<li class="nav-item">
+							<a href="#three">Contáctame</a>
+						</li>
+						<!-- <li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Dropdown
+							</a>
+							<ul class="dropdown-menu dropdown-menu-dark">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+							</ul>
+						</li>
+						</ul>
+						<form class="d-flex mt-3" role="search">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-success" type="submit">Search</button> -->
+						</form>
+					</div>
+				</div>
+			</div>
+			</nav>
 
 		<!-- Sidebar -->
 			<section id="sidebar">
+				<!-- <button class="toggle-btn" onclick="toggleSidebar()"> 
+					<span>&#9776</span>
+				</button> -->
+				<div class="toggle-btn">
+					<span>&#9776</span>
+				</div>
 				<div class="inner">
 					<nav>
 						<ul>
 							<li><a href="#intro">Bienvenido</a></li>
 							<li><a href="#one">Proyectos</a></li>
 							<li><a href="#two">Experiencia</a></li>
+							<li><a href="#three">Contáctame</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -35,25 +89,22 @@
 
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
+						<div class="inner head">
 							<div class="row">
 								<div class="col-md-8">
 								</div>
 								<div class="col-md-4">
-									<div class="mb-5">
-										<a href="guardaajavier@gmail.com"><i class="fa-regular fa-envelope"></i>				guardaajavier@gmail.com</a>
-									</div>
 								</div>
 							</div>
 							<h1>Javier Guarda | Portafolio</h1>
-							<p>Este es mi portafolio. Aquí te muestro mis pricipales trabajos en Desarrollo Web</p>
+							<p class="subt1">Este es mi portafolio. Aquí te muestro mis principales trabajos en Desarrollo Web</p>
 							<div class="row">
 								<div class="col-md-6 mt-4">
 									<ul class="actions">
 										<ul><a href="presentacion.html" class="button">Leer más</a></ul>
 									</ul>
 								</div>
-								<div class="col-md-6" style="margin-top: 7rem;">
+								<div class="col-md-6">
 									<div class="social-icons">
 										<a class="social-icon" href="https://github.com/wardazeroth"><i class="fab fa-github"></i></a>
 									</div>
@@ -65,7 +116,17 @@
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights">
 						<section>
-							<a href="" class="image" id='openModalButton'><img src="images/captura1.jpg" alt="" data-position="center center" /></a>
+							<figure id='openModalButton'>
+								<a href="#" class="image"><img src="images/captura1.jpg" alt="" data-position="top center" /></a>
+								<div class="capa">
+									<h3>AlquileresChile</h3>
+									<p>Sitio de arriendo de inmuebles en Chile, donde es posible buscar ejemplares con distintas características y locaciones. Diseñado para ser administrado y poder realizar las operaciones CRUD sobre las propiedades a modo de un negocio inmobiliario
+									</p>								
+								</div>
+							</figure>
+														
+
+							
 							<div class="content">
 								<div class="inner">
 									<h2>AlquileresChile</h2>
@@ -77,7 +138,15 @@
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image" id='openModalButton2'><img src="images/onlyflan6.jpg" alt="" data-position="top center" /></a>
+							<figure  id='openModalButton2'>
+								<a href="#" class="image"><img src="images/onlyflan6.jpg" alt="" data-position="top center" /></a>
+								<div class="capa">
+									<h3>OnlyFlans</h3>
+									<p>Sitio Web administrativo y catálogo de un negocio de pastelería enfocado en flanes, donde los usuarios visitantes pueden revisar la variada oferta, y el administrador manejar el stock de los productos y editar sus características
+									</p>								
+								</div>
+							</figure>
+
 							<div class="content">
 								<div class="inner">
 									<h2>OnlyFlans</h2>
@@ -93,22 +162,100 @@
 
 				<!-- Two -->
 					<section id="two" class="wrapper fade-up">
-						<div class="inner">
+						<div class="inner self">
 							<h2>Experiencia</h2>
-							<p>Como estudiante de desarrollo Web, éstas son las principales tecnologías y herramientas con las que he trabajando:</p>
+							<p>Como estudiante de Desarrollo Web, éstas son las principales tecnologías y herramientas con las que he trabajando:</p>
 							<div class="features">
-								<section>
-									<span class="icon"><img style="height: 4.5rem;" src="images/Python.svg.png" alt=""></span>
+								<section class="rectangulo">
+									<span class="icon"><img style="height: 3.5rem;" src="images/Python.svg.png" alt=""></span>
 									<span class="icon"><img style="height: 7rem;" src="images/django2.png" alt=""></span>
-									<span class="icon"><img style="height: 5rem; padding-left: 1rem;" src="assets/css/images/postgresql-plain-wordmark.svg" alt=""></span>
-									<span class="icon"><img style="height: 5rem; padding-left: 1rem;" src="images/oracle.png" alt=""></span>
-									<span class="icon"><img style="height: 5rem; padding-left: 1rem;" src="assets/css/images/jquery.svg" alt=""></span>
-									<span class="icon"><img style="height: 5rem; padding-left: 1rem;" src="images/html.png" alt=""></span>
+									<span class="icon"><img style="height: 5rem;" src="assets/css/images/postgresql-plain-wordmark.svg" alt=""></span>
+									<span class="icon"><img style="height: 5rem; padding-left: 10px;" src="images/oracle.png" alt=""></span>
+									<span class="icon"><img style="height: 5rem;" src="assets/css/images/jquery.svg" alt=""></span>
+									<span class="icon"><img style="height: 4rem; padding-left: 1rem;" src="images/bootstrap.png" alt=""></span>
+									<span class="icon"><img style="height: 5rem;" src="images/html.png" alt=""></span>
 									<span class="icon"><img style="height: 5rem; padding-left: 1rem;" src="images/css.png" alt=""></span>
 								</section>
 							</div>
 						</div>
 					</section>
+
+				<!-- Three -->
+				<section id="three" class="wrapper style1 fade-up">
+					<div class="inner form">
+						<h2>Contacto</h2>
+						<p>Escríbeme y te responderé a la brevedad</p>
+						<div class="split style1 row">
+							<div class="col-xs-12 col-sm-12 col-md-8">
+								<section>
+									<form id="my-form" method="post" action="https://formspree.io/f/mgvwdnqz">
+										<div class="fields">
+											<div class="field half">
+												<label for="name">Nombre</label>
+												<input type="text" name="name" id="name" />
+											</div>
+											<div class="field half">
+												<label for="email">Email</label>
+												<input type="text" name="email" id="email" />
+											</div>
+											<div class="field">
+												<label for="message">Mensaje</label>
+												<textarea name="message" id="message" rows="5"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+												<button id="my-form-button" class="button">
+													<span></span>
+													<span></span>
+													<span></span>
+													<span></span>
+													Enviar
+												</button>
+
+
+												<!-- <button id="my-form-button" class="button">
+													<i></i>
+													<i></i>
+													<span>Enviar</span>
+												</button> -->
+	
+											<!-- <li><a href="" id="my-form-button" class="button submit">Enviar</a></li> -->
+										</ul>
+										<p id="my-form-status"></p>
+									</form>
+								</section>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-4">
+								<section>
+									<ul class="contact">
+										<li>
+											<h3>Dirección</h3>
+											<span>Valdivia, Región de Los Ríos, Chile</span>
+										</li>
+										<li>
+											<h3>Email</h3>
+											<span>guardaajavier@gmail.com<span>
+										</li>
+										<li>
+											<h3>Teléfono</h3>
+											<span>+569 58877555</span>
+										</li>
+										<li>
+											<h3>Social</h3>								
+											<ul class="icons">
+												<li><a href="https://github.com/wardazeroth" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+												<li><a href="https://www.linkedin.com/in/javier-guarda-acosta-770327323/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+											</ul>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
 
 		<!-- Footer -->
 			<footer id="footer" class="wrapper style1-alt">
@@ -160,12 +307,12 @@
 								</div>
 							</div>
 							<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Previous</span>
+							<div class="carousel-control-prev-icon" aria-hidden="true"></div>
+							<div class="visually-hidden">Previous</div>
 							</button>
 							<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Next</span>							
+							<div class="carousel-control-next-icon" aria-hidden="true"></div>
+							<div class="visually-hidden">Next</div>							
 							</button>
 						</div>						
 					</div>					
@@ -208,9 +355,45 @@
 							</button>
 						</div>						
 					</div>					
-				</div>
+				</div> 
 				</div>
 			</div>
 		</div>
 	</body>
+	
 </html>
+<!-- Place this script at the end of the body tag -->
+<script>
+	var form = document.getElementById("my-form");
+	
+	async function handleSubmit(event) {
+	event.preventDefault();
+	var status = document.getElementById("my-form-status");
+	var data = new FormData(event.target);
+	fetch(event.target.action, {
+	method: form.method,
+	body: data,
+	headers: {
+		'Accept': 'application/json'
+	}
+	}).then(response => {
+	if (response.ok) {
+		status.innerHTML = "¡Gracias por contactarte!. Te responderé a la brevedad";
+		form.reset()
+	} else {
+		response.json().then(data => {
+		if (Object.hasOwn(data, 'errors')) {
+			status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+		} else {
+			status.innerHTML = "Oops! Ha habido un error al enviar tu mensaje"
+		}
+		})
+	}
+	}).catch(error => {
+	status.innerHTML = "Oops! Ha habido un error al enviar tu mensaje"
+	});
+}
+form.addEventListener("submit", handleSubmit)
+</script>
+
+
